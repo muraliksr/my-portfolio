@@ -5,8 +5,16 @@ function Header() {
     <header className="header">
       <div className="header-inner">
         <div className="brand">
-          <h1>Murali Krishnappan</h1>
-          <p>Frontend & E-commerce Developer</p>
+          <div className="brand-photo">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/profile.jpeg`}
+              alt="Murali Krishnappan"
+            />
+          </div>
+          <div className="brand-text">
+            <h1>Murali Krishnappan</h1>
+            <p>Frontend & E-commerce Developer</p>
+          </div>
         </div>
         <nav className="nav">
           <a href="#about">About</a>
