@@ -121,6 +121,7 @@ html {
 .section{
   padding: 56px 22px;
   text-align: center;
+  border-top: 1px solid rgba(47, 109, 246, 0.25);
 }
 
 

@@ -32,14 +32,6 @@ function About() {
               <p>Design handoffs, API integration, and QA support.</p>
             </div>
           </div>
-          <div className="about-actions">
-            <a className="btn primary" href="#projects">
-              View Projects
-            </a>
-            <a className="btn ghost" href="#contact">
-              Let’s Collaborate
-            </a>
-          </div>
         </div>
         <div className="about-visual">
           <div className="profile-card">
