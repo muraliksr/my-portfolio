@@ -42,6 +42,8 @@ function App() {
       title: "Calculator App",
       description: "Responsive UI with clean interactions.",
       tech: ["React.js", "JavaScript", "HTML/CSS"],
+      link: "https://tiles-calculator-rho.vercel.app/",
+      apkLink: "/tile-calculator-main-6f36f4-debug.apk",
     },
   ];
 

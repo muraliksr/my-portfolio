@@ -122,7 +122,17 @@ html {
   padding: 56px 22px;
   text-align: center;
   border-top: 1px solid rgba(47, 109, 246, 0.25);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: section-reveal 0.8s ease forwards;
 }
+
+.section:nth-of-type(1) { animation-delay: 0.05s; }
+.section:nth-of-type(2) { animation-delay: 0.12s; }
+.section:nth-of-type(3) { animation-delay: 0.19s; }
+.section:nth-of-type(4) { animation-delay: 0.26s; }
+.section:nth-of-type(5) { animation-delay: 0.33s; }
+.section:nth-of-type(6) { animation-delay: 0.4s; }
 
 
 /* Skills */
@@ -157,6 +167,26 @@ html {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: pill-reveal 0.55s ease forwards;
+}
+
+.skill-pill:nth-child(1) { animation-delay: 0.04s; }
+.skill-pill:nth-child(2) { animation-delay: 0.08s; }
+.skill-pill:nth-child(3) { animation-delay: 0.12s; }
+.skill-pill:nth-child(4) { animation-delay: 0.16s; }
+.skill-pill:nth-child(5) { animation-delay: 0.2s; }
+.skill-pill:nth-child(6) { animation-delay: 0.24s; }
+.skill-pill:nth-child(7) { animation-delay: 0.28s; }
+.skill-pill:nth-child(8) { animation-delay: 0.32s; }
+.skill-pill:nth-child(9) { animation-delay: 0.36s; }
+.skill-pill:nth-child(10) { animation-delay: 0.4s; }
+.skill-pill:nth-child(11) { animation-delay: 0.44s; }
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(17, 17, 17, 0.12);
 }
 
 .skill-pill.active {
@@ -182,6 +212,20 @@ html {
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(31, 26, 22, 0.1);
   text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(31, 26, 22, 0.16);
 }
 
 .project-card h3 {
@@ -200,6 +244,27 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+
+.project-actions {
+  margin-top: 16px;
+}
+
+.project-action {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(17, 17, 17, 0.2);
 }
 
 .project-pill {
@@ -310,10 +375,20 @@ html {
 /* Footer */
 
 .footer{
-background:#111;
-color:white;
-text-align:center;
-padding:20px;
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
+  }
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 
 /* About */
@@ -668,6 +743,38 @@ padding:20px;
 
   .nav {
     justify-content: center;
+  }
+}
+
+@keyframes section-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pill-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .section {
+    opacity: 1;
+    transform: none;
+  }
+
+  .skill-pill {
+    opacity: 1;
+    transform: none;
   }
 }
 

@@ -19,7 +19,26 @@ function Projects({ projects, selectedSkill }) {
 
       <div className="projects-grid">
         {visibleProjects.map((project) => (
-          <article className="project-card" key={project.title}>
+          <article
+            className={`project-card${project.link ? " project-card-link" : ""}`}
+            key={project.title}
+            onClick={
+              project.link
+                ? () => window.open(project.link, "_blank", "noreferrer")
+                : undefined
+            }
+            onKeyDown={
+              project.link
+                ? (event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      window.open(project.link, "_blank", "noreferrer");
+                    }
+                  }
+                : undefined
+            }
+            role={project.link ? "link" : undefined}
+            tabIndex={project.link ? 0 : undefined}
+          >
             <div className="project-card-top">
               <h3>{project.title}</h3>
               <span className="project-pill">{project.tech[0]}</span>
@@ -32,6 +51,18 @@ function Projects({ projects, selectedSkill }) {
                 </span>
               ))}
             </div>
+            {project.apkLink && (
+              <div className="project-actions">
+                <a
+                  className="project-action"
+                  href={project.apkLink}
+                  download
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  Download APK
+                </a>
+              </div>
+            )}
           </article>
         ))}
         {visibleProjects.length === 0 && (
