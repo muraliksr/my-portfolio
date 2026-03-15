@@ -19,12 +19,8 @@ function App() {
     "JavaScript",
     "React.js",
     "Shopify (Liquid)",
-    "Webflow",
     "Java",
-    "Spring Boot (basic)",
-    "Git",
-    "Postman",
-    "VS Code",
+    "Spring Boot (basic)"
   ];
 
   const projects = [

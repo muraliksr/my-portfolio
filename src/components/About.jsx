@@ -14,7 +14,7 @@ function About() {
           </h2>
           <p className="about-lead">
             Frontend & E‑commerce Developer with 2.6 years of experience in
-            React.js, Shopify, and Webflow. I build responsive interfaces, craft
+            React.js, and Shopify. I build responsive interfaces, craft
             custom Shopify sections, and collaborate closely with cross‑functional
             teams to ship polished storefronts.
           </p>
@@ -39,7 +39,7 @@ function About() {
               <div className="avatar">MK</div>
               <div>
                 <h3>Frontend & E‑commerce Developer</h3>
-                <p className="muted">React • Shopify • Webflow • Java (basic)</p>
+                <p className="muted">React • Shopify  • Java (basic)</p>
               </div>
             </div>
             <div className="profile-grid">
@@ -87,9 +87,9 @@ function About() {
               <a className="badge badge-link" href="#skills">
                 React UI
               </a>
-              <a className="badge badge-link" href="#skills">
+              {/* <a className="badge badge-link" href="#skills">
                 Webflow
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
