@@ -19,8 +19,7 @@ function App() {
     "JavaScript",
     "React.js",
     "Shopify (Liquid)",
-    "Java",
-    "Spring Boot (basic)"
+    "GitHub"
   ];
 
   const projects = [
@@ -29,11 +28,11 @@ function App() {
       description: "Storefront with product catalog, cart, and checkout flows.",
       tech: ["React.js", "Shopify (Liquid)", "JavaScript", "HTML/CSS"],
     },
-    {
-      title: "Student Management System",
-      description: "CRUD platform with authentication and role-based access.",
-      tech: ["Java", "Spring Boot (basic)"],
-    },
+    // {
+    //   title: "Student Management System",
+    //   description: "CRUD platform with authentication and role-based access.",
+    //   tech: ["Java", "Spring Boot (basic)"],
+    // },
     {
       title: "Calculator App",
       description: "Responsive UI with clean interactions.",

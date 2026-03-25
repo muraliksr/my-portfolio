@@ -5,6 +5,13 @@ function Projects({ projects, selectedSkill }) {
     selectedSkill === "All"
       ? projects
       : projects.filter((project) => project.tech.includes(selectedSkill));
+  const projectsGridClassName = [
+    "projects-grid",
+    visibleProjects.length === 1 ? "projects-grid-single" : "",
+    visibleProjects.length === 2 ? "projects-grid-double" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <section className="section projects-section" id="projects">
@@ -13,15 +20,24 @@ function Projects({ projects, selectedSkill }) {
         <h2>
           {selectedSkill === "All"
             ? "Selected work across the stack."
-            : `Projects using ${selectedSkill}.`}
+            : (
+              <>
+                Projects using{" "}
+                <span className="project-skill-label" key={selectedSkill}>
+                  {selectedSkill}
+                </span>
+                .
+              </>
+            )}
         </h2>
       </div>
 
-      <div className="projects-grid">
-        {visibleProjects.map((project) => (
+      <div className={projectsGridClassName} key={selectedSkill}>
+        {visibleProjects.map((project, index) => (
           <article
             className={`project-card${project.link ? " project-card-link" : ""}`}
             key={project.title}
+            style={{ "--project-index": index }}
             onClick={
               project.link
                 ? () => window.open(project.link, "_blank", "noreferrer")
