@@ -13,10 +13,11 @@ function About() {
             experiences.
           </h2>
           <p className="about-lead">
-            Frontend & E‑commerce Developer with 2.6 years of experience in
-            React.js, and Shopify. I build responsive interfaces, craft
-            custom Shopify sections, and collaborate closely with cross‑functional
-            teams to ship polished storefronts.
+            Shopify Theme Developer with 2 years of experience in Shopify theme
+            customization and Webflow development. I work with HTML, CSS,
+            JavaScript, and Shopify Liquid to create responsive, user-friendly
+            e-commerce websites. I also have practical experience using Shopify
+            CLI for theme development and customization.
           </p>
           <div className="about-highlights">
             <div className="highlight-card">
@@ -38,8 +39,8 @@ function About() {
             <div className="profile-top">
               <div className="avatar">MK</div>
               <div>
-                <h3>Frontend & E‑commerce Developer</h3>
-                <p className="muted">React • Shopify  • Java (basic)</p>
+                <h3>Shopify Theme Developer</h3>
+                <p className="muted">Shopify Liquid • Shopify CLI • Webflow</p>
               </div>
             </div>
             <div className="profile-grid">
@@ -49,7 +50,7 @@ function About() {
                 onClick={() => setIsModalOpen(true)}
                 aria-label="View experience details"
               >
-                <span className="stat-number">2.6+</span>
+                <span className="stat-number">2</span>
                 <span className="stat-label">Years Experience</span>
               </button>
               <button
@@ -58,8 +59,8 @@ function About() {
                 onClick={() => setIsModalOpen(true)}
                 aria-label="View company details"
               >
-                <span className="stat-number">2</span>
-                <span className="stat-label">Companies</span>
+                <span className="stat-number">1</span>
+                <span className="stat-label">Company</span>
               </button>
               <button
                 type="button"
@@ -67,7 +68,7 @@ function About() {
                 onClick={() => setIsModalOpen(true)}
                 aria-label="View skills details"
               >
-                <span className="stat-number">5+</span>
+                <span className="stat-number">6</span>
                 <span className="stat-label">Core Skills</span>
               </button>
               <button
@@ -85,11 +86,8 @@ function About() {
                 Shopify Themes
               </a>
               <a className="badge badge-link" href="#skills">
-                React UI
-              </a>
-              {/* <a className="badge badge-link" href="#skills">
                 Webflow
-              </a> */}
+              </a>
             </div>
           </div>
         </div>
@@ -108,19 +106,15 @@ function About() {
             </button>
             <h3>Experience Snapshot</h3>
             <p className="modal-lead">
-              2.6+ years total across two companies.
+              2 years of practical Shopify and Webflow development experience.
             </p>
             <div className="modal-grid">
               <div className="modal-block">
-                <h4>Drishticon Consultancy Services</h4>
-                <p>1.6 years · React, Java, Postman, GitHub, MySQL</p>
-                <a href="#experience" onClick={() => setIsModalOpen(false)}>
-                  Go to Experience
-                </a>
-              </div>
-              <div className="modal-block">
                 <h4>Manic Media</h4>
-                <p>1 year · Shopify theme development</p>
+                <p>
+                  2 years · Shopify theme development and customization.
+                  Additional experience includes one Webflow website.
+                </p>
                 <a href="#experience" onClick={() => setIsModalOpen(false)}>
                   Go to Experience
                 </a>

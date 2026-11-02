@@ -15,30 +15,38 @@ function App() {
 
   const skills = [
     "All",
-    "HTML/CSS",
+    "HTML5",
+    "CSS3",
     "JavaScript",
-    "React.js",
-    "Shopify (Liquid)",
-    "GitHub"
+    "Shopify Liquid",
+    "Shopify CLI",
+    "Webflow",
   ];
 
   const projects = [
     {
-      title: "Ecommerce Website",
-      description: "Storefront with product catalog, cart, and checkout flows.",
-      tech: ["React.js", "Shopify (Liquid)", "JavaScript", "HTML/CSS"],
+      title: "WearComet",
+      description: "Shopify storefront customization and responsive e-commerce development.",
+      tech: ["HTML", "CSS", "JavaScript", "Shopify Liquid"],
+      link: "https://www.wearcomet.com/",
+      image:
+        "https://image.thum.io/get/width/1200/crop/800/https://www.wearcomet.com/",
     },
-    // {
-    //   title: "Student Management System",
-    //   description: "CRUD platform with authentication and role-based access.",
-    //   tech: ["Java", "Spring Boot (basic)"],
-    // },
     {
-      title: "Calculator App",
-      description: "Responsive UI with clean interactions.",
-      tech: ["React.js", "JavaScript", "HTML/CSS"],
-      link: "https://tiles-calculator-rho.vercel.app/",
-      apkLink: "/tile-calculator-main-6f36f4-debug.apk",
+      title: "Wear Lafoli",
+      description: "Shopify website customization with polished, responsive storefront layouts.",
+      tech: ["HTML", "CSS", "JavaScript", "Shopify Liquid"],
+      link: "https://wearlafoli.com/",
+      image:
+        "https://image.thum.io/get/width/1200/crop/800/https://wearlafoli.com/",
+    },
+    {
+      title: "Minus30",
+      description: "Shopify collection page development and responsive theme customization.",
+      tech: ["HTML", "CSS", "JavaScript", "Shopify Liquid"],
+      link: "https://minus30.co/collections/plant-based-sugar-free",
+      image:
+        "https://image.thum.io/get/width/1200/crop/800/https://minus30.co/collections/plant-based-sugar-free",
     },
   ];
 

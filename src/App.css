@@ -230,6 +230,16 @@ html {
   animation-delay: calc(var(--project-index, 0) * 80ms);
 }
 
+.project-preview {
+  display: block;
+  width: calc(100% + 44px);
+  height: 150px;
+  margin: -22px -22px 18px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  background: #f3f0ec;
+}
+
 .project-card-link {
   display: block;
   color: inherit;

@@ -13,7 +13,7 @@ function Header() {
           </div>
           <div className="brand-text">
             <h1>Murali Krishnappan</h1>
-            <p>Frontend & E-commerce Developer</p>
+            <p>Shopify Theme Developer</p>
           </div>
         </div>
         <nav className="nav">

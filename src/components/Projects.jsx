@@ -4,7 +4,11 @@ function Projects({ projects, selectedSkill }) {
   const visibleProjects =
     selectedSkill === "All"
       ? projects
-      : projects.filter((project) => project.tech.includes(selectedSkill));
+      : projects.filter((project) =>
+          project.tech.includes(selectedSkill) ||
+          (selectedSkill === "HTML5" && project.tech.includes("HTML")) ||
+          (selectedSkill === "CSS3" && project.tech.includes("CSS"))
+        );
   const projectsGridClassName = [
     "projects-grid",
     visibleProjects.length === 1 ? "projects-grid-single" : "",
@@ -19,7 +23,7 @@ function Projects({ projects, selectedSkill }) {
         <p className="eyebrow">Projects</p>
         <h2>
           {selectedSkill === "All"
-            ? "Selected work across the stack."
+            ? "Shopify ecommerce websites and storefront work."
             : (
               <>
                 Projects using{" "}
@@ -55,6 +59,14 @@ function Projects({ projects, selectedSkill }) {
             role={project.link ? "link" : undefined}
             tabIndex={project.link ? 0 : undefined}
           >
+            {project.image && (
+              <img
+                className="project-preview"
+                src={project.image}
+                alt={`${project.title} website preview`}
+                loading="lazy"
+              />
+            )}
             <div className="project-card-top">
               <h3>{project.title}</h3>
               <span className="project-pill">{project.tech[0]}</span>
@@ -67,15 +79,16 @@ function Projects({ projects, selectedSkill }) {
                 </span>
               ))}
             </div>
-            {project.apkLink && (
+            {project.link && (
               <div className="project-actions">
                 <a
                   className="project-action"
-                  href={project.apkLink}
-                  download
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={(event) => event.stopPropagation()}
                 >
-                  Download APK
+                  Live Website
                 </a>
               </div>
             )}
